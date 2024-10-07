@@ -41,25 +41,32 @@ body {
     font-size: 12px;
     font-weight: 400px;
     background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../images13/bg.jpg") no-repeat center 0 / cover;
-    max-width:  1200px;
+    height: 100vh;
+	overflow: hidden;
+	/*max-width:  1200px;
 	height: 760px; 
-	z-index: -10;
-	position: relative;
+	z-index: -10; 
+	position: relative; */
 }
 .container {
 	width: 496px;
 	background: rgba(233, 233, 233, 0.25);
-	position: absolute;
+	margin-left: auto;
+	height: 100%;
+	overflow: auto;
+	/*position: absolute;
 	top: 0;
 	right: 0;
 	bottom: 0;
-	z-index: -5;
+	z-index: -5; */
 }
 .content {
 	max-width: 340px;
-	position: absolute;
+	margin: 0 auto;
+	padding: 60px 0;
+	/*position: absolute;
 	left: 78px;
-	top: 62px;
+	top: 62px; */
 }
 .switch {
 	margin-bottom: 75px;
@@ -84,9 +91,9 @@ body {
 .switch label::before {
 	content: '';
 	position: absolute;
-	top: 1px;
+	bottom: 1px;
 	left: 2px;
-	width: 168px;
+	width: 50%;
 	height: 32px;
 	border-radius: 30px;
     background: #153416;
@@ -94,7 +101,7 @@ body {
 }
 
 .switch input:checked+label::before {
-	left: calc(100% - 2px);
+	left: calc(100% - 1px);
 	transform: translateX(-100%);
 }
 
@@ -108,7 +115,7 @@ body {
 }
 .vhid {
 	font-size: 30px;
-	font-weight: 400px;
+	font-weight: 400;
 	text-align: center;
 	margin-bottom: 29px;
 }
@@ -117,6 +124,7 @@ body {
 	height: 44px;
 	border-radius: 30px;
     background: #929191;
+	color: #fff;
 	outline: none;
 	border: none;
 	margin-bottom: 15px;
@@ -126,7 +134,9 @@ body {
 }
 .checkbox {
 	display: flex;
-	gap: 127px;
+	justify-content: space-between;
+	align-items: center;
+	/*gap: 127px; */
 }
 .checkbox input {
 	position: absolute;
